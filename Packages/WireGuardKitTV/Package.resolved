@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "wg-go-apple",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/partout-io/wg-go-apple",
+      "state" : {
+        "revision" : "dfd5cc1f8840686297a4c3ec3e88b6a1adf87331",
+        "version" : "0.0.20260530"
+      }
+    }
+  ],
+  "version" : 2
+}

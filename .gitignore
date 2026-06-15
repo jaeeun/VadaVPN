@@ -1,0 +1,9 @@
+.DS_Store
+xcuserdata/
+DerivedData/
+build/
+*.xcresult
+Packages/WireGuardKitTV/.build/
+
+# WireGuard config (secrets — do not commit)
+App/Config/appletv.conf

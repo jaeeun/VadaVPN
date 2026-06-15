@@ -1,0 +1,67 @@
+name: VPNforAppleTV
+options:
+  deploymentTarget:
+    tvOS: "17.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    CODE_SIGN_STYLE: Automatic
+    # The prebuilt wg-go.xcframework ships only an arm64 slice for the tvOS
+    # simulator, so Intel-simulator builds are excluded.
+    "EXCLUDED_ARCHS[sdk=appletvsimulator*]": x86_64
+    # Set your Apple Developer team ID here (Xcode > Settings > Accounts),
+    # or pick the team in Xcode's Signing & Capabilities tab for both targets.
+    DEVELOPMENT_TEAM: ""
+
+packages:
+  WireGuardKitTV:
+    path: Packages/WireGuardKitTV
+
+targets:
+  VPNforAppleTV:
+    type: application
+    platform: tvOS
+    sources:
+      - path: App
+        excludes:
+          - "**/.DS_Store"
+    dependencies:
+      - target: PacketTunnel
+      - package: WireGuardKitTV
+        product: WireGuardKit
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.vada.appletv.vpn
+        CODE_SIGN_ENTITLEMENTS: App/VPNforAppleTV.entitlements
+        TARGETED_DEVICE_FAMILY: "3"
+        ASSETCATALOG_COMPILER_APPICON_NAME: "App Icon & Top Shelf Image"
+    info:
+      path: App/Info.plist
+      properties:
+        CFBundleDisplayName: Vada VPN
+        UILaunchScreen: {}
+
+  PacketTunnel:
+    type: app-extension
+    platform: tvOS
+    sources:
+      - path: PacketTunnel
+        excludes:
+          - "**/.DS_Store"
+    dependencies:
+      - package: WireGuardKitTV
+        product: WireGuardKit
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.vada.appletv.vpn.tunnel
+        CODE_SIGN_ENTITLEMENTS: PacketTunnel/PacketTunnel.entitlements
+        TARGETED_DEVICE_FAMILY: "3"
+    info:
+      path: PacketTunnel/Info.plist
+      properties:
+        CFBundleDisplayName: PacketTunnel
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.networkextension.packet-tunnel
+          NSExtensionPrincipalClass: $(PRODUCT_MODULE_NAME).PacketTunnelProvider

@@ -1,0 +1,512 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0BB6DA7CE5056A8B7B8CE40D /* appletv.conf in Resources */ = {isa = PBXBuildFile; fileRef = 1BDB10DF14C39634B80F8DED /* appletv.conf */; };
+		2834B335C1EC54C9ABC20058 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07835C31A6F950DF73E4A3 /* PacketTunnelProvider.swift */; };
+		65D75B379F4A82E3ACABB2B3 /* TunnelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CCA8153576FCB74D6A3E69 /* TunnelManager.swift */; };
+		714A43DF409B6C46F77E1A31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3111441A6DB5E1285817217 /* Assets.xcassets */; };
+		769EF2E58AC1F0DD63B8A0DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17BF58BB206B455FDF968EF /* ContentView.swift */; };
+		8E5945E1CFB3B7D525519666 /* PacketTunnel.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 59EB7C9BC3D5D224459B5347 /* PacketTunnel.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A37E57C0CAAFB209E778645F /* VPNApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BD857A7EBDA18FE3235371 /* VPNApp.swift */; };
+		E21D3355EBFABA5A41E44B33 /* WireGuardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1C40522F6A1E59FEC27AAFF4 /* WireGuardKit */; };
+		F519DFEC58C2A8772324989D /* WireGuardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9689E43380F92C798DF063D6 /* WireGuardKit */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B784F9A86AE1A0407E7322B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 646A88CE673398C2BCE6660A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AAA6AF54445B86AC9948E7B6;
+			remoteInfo = PacketTunnel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		63238536C81241B6385E7DF2 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8E5945E1CFB3B7D525519666 /* PacketTunnel.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1BDB10DF14C39634B80F8DED /* appletv.conf */ = {isa = PBXFileReference; lastKnownFileType = text; path = appletv.conf; sourceTree = "<group>"; };
+		28BD857A7EBDA18FE3235371 /* VPNApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNApp.swift; sourceTree = "<group>"; };
+		2A07835C31A6F950DF73E4A3 /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
+		39CCA8153576FCB74D6A3E69 /* TunnelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunnelManager.swift; sourceTree = "<group>"; };
+		3FFBEBF0DCE906E747CA176A /* PacketTunnel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PacketTunnel.entitlements; sourceTree = "<group>"; };
+		4C66F00AE45B9DA4A4EB615A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		556244FC260EF55CD7DD0571 /* VPNforAppleTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPNforAppleTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		59EB7C9BC3D5D224459B5347 /* PacketTunnel.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PacketTunnel.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F3CB763E0EC156BEE2917E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B17BF58BB206B455FDF968EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B369E5D6E35797E25EA70768 /* VPNforAppleTV.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VPNforAppleTV.entitlements; sourceTree = "<group>"; };
+		BA254938DBF93D6EDE952FB8 /* WireGuardKitTV */ = {isa = PBXFileReference; lastKnownFileType = folder; name = WireGuardKitTV; path = Packages/WireGuardKitTV; sourceTree = SOURCE_ROOT; };
+		D3111441A6DB5E1285817217 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		65E59810CF0E9F664DD3A65D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F519DFEC58C2A8772324989D /* WireGuardKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0269A63C8E740D98F1DCF6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E21D3355EBFABA5A41E44B33 /* WireGuardKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1BAA91C013B765761C829E0B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				59EB7C9BC3D5D224459B5347 /* PacketTunnel.appex */,
+				556244FC260EF55CD7DD0571 /* VPNforAppleTV.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2634FB9A81E2DB1530211694 /* PacketTunnel */ = {
+			isa = PBXGroup;
+			children = (
+				5F3CB763E0EC156BEE2917E3 /* Info.plist */,
+				3FFBEBF0DCE906E747CA176A /* PacketTunnel.entitlements */,
+				2A07835C31A6F950DF73E4A3 /* PacketTunnelProvider.swift */,
+			);
+			path = PacketTunnel;
+			sourceTree = "<group>";
+		};
+		3478422010518678480AC888 = {
+			isa = PBXGroup;
+			children = (
+				EAE32E8E9FFE966547BECA12 /* App */,
+				FAE08EE182A4392038619614 /* Packages */,
+				2634FB9A81E2DB1530211694 /* PacketTunnel */,
+				1BAA91C013B765761C829E0B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EAE32E8E9FFE966547BECA12 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D3111441A6DB5E1285817217 /* Assets.xcassets */,
+				B17BF58BB206B455FDF968EF /* ContentView.swift */,
+				4C66F00AE45B9DA4A4EB615A /* Info.plist */,
+				39CCA8153576FCB74D6A3E69 /* TunnelManager.swift */,
+				28BD857A7EBDA18FE3235371 /* VPNApp.swift */,
+				B369E5D6E35797E25EA70768 /* VPNforAppleTV.entitlements */,
+				F88709F63032271EC9C94EE2 /* Config */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F88709F63032271EC9C94EE2 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				1BDB10DF14C39634B80F8DED /* appletv.conf */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		FAE08EE182A4392038619614 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				BA254938DBF93D6EDE952FB8 /* WireGuardKitTV */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		83F2B36E90857CEA838C3B14 /* VPNforAppleTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4AB078EB5E408CC999C078E2 /* Build configuration list for PBXNativeTarget "VPNforAppleTV" */;
+			buildPhases = (
+				C4B8166FC4CB6A8C49FBD7D0 /* Sources */,
+				5BC52C672D804E182C5BDAF2 /* Resources */,
+				A0269A63C8E740D98F1DCF6D /* Frameworks */,
+				63238536C81241B6385E7DF2 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2F4A0A103D29805F758EC625 /* PBXTargetDependency */,
+			);
+			name = VPNforAppleTV;
+			packageProductDependencies = (
+				1C40522F6A1E59FEC27AAFF4 /* WireGuardKit */,
+			);
+			productName = VPNforAppleTV;
+			productReference = 556244FC260EF55CD7DD0571 /* VPNforAppleTV.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AAA6AF54445B86AC9948E7B6 /* PacketTunnel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2C9974E365C3E7426D6951C /* Build configuration list for PBXNativeTarget "PacketTunnel" */;
+			buildPhases = (
+				E6F15E3731DF0D99F3D5B38D /* Sources */,
+				65E59810CF0E9F664DD3A65D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PacketTunnel;
+			packageProductDependencies = (
+				9689E43380F92C798DF063D6 /* WireGuardKit */,
+			);
+			productName = PacketTunnel;
+			productReference = 59EB7C9BC3D5D224459B5347 /* PacketTunnel.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		646A88CE673398C2BCE6660A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					83F2B36E90857CEA838C3B14 = {
+						ProvisioningStyle = Automatic;
+					};
+					AAA6AF54445B86AC9948E7B6 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = D29473036205B872E19ABBAC /* Build configuration list for PBXProject "VPNforAppleTV" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 3478422010518678480AC888;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				FEF001C8A9298F8463C7D2E5 /* XCLocalSwiftPackageReference "Packages/WireGuardKitTV" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 1BAA91C013B765761C829E0B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AAA6AF54445B86AC9948E7B6 /* PacketTunnel */,
+				83F2B36E90857CEA838C3B14 /* VPNforAppleTV */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5BC52C672D804E182C5BDAF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				714A43DF409B6C46F77E1A31 /* Assets.xcassets in Resources */,
+				0BB6DA7CE5056A8B7B8CE40D /* appletv.conf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C4B8166FC4CB6A8C49FBD7D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				769EF2E58AC1F0DD63B8A0DD /* ContentView.swift in Sources */,
+				65D75B379F4A82E3ACABB2B3 /* TunnelManager.swift in Sources */,
+				A37E57C0CAAFB209E778645F /* VPNApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6F15E3731DF0D99F3D5B38D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2834B335C1EC54C9ABC20058 /* PacketTunnelProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2F4A0A103D29805F758EC625 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AAA6AF54445B86AC9948E7B6 /* PacketTunnel */;
+			targetProxy = B784F9A86AE1A0407E7322B3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1E6F8F46E898DAFD6CAD9CA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=appletvsimulator*]" = x86_64;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+				TVOS_DEPLOYMENT_TARGET = 17.0;
+			};
+			name = Debug;
+		};
+		375354DAD982C71DE1657D7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PacketTunnel/PacketTunnel.entitlements;
+				DEVELOPMENT_TEAM = NY6WPB2KHL;
+				INFOPLIST_FILE = PacketTunnel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vada.appletv.vpn.tunnel;
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		631176760CB929E9A3CF11BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = App/VPNforAppleTV.entitlements;
+				DEVELOPMENT_TEAM = NY6WPB2KHL;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vada.appletv.vpn;
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		6F558B1F05BE0F06508F3762 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PacketTunnel/PacketTunnel.entitlements;
+				DEVELOPMENT_TEAM = NY6WPB2KHL;
+				INFOPLIST_FILE = PacketTunnel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vada.appletv.vpn.tunnel;
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+		9E88D47CCFBBC02E6824D014 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=appletvsimulator*]" = x86_64;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+				TVOS_DEPLOYMENT_TARGET = 17.0;
+			};
+			name = Release;
+		};
+		E8BDCEC8AC67351F35BEA029 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = App/VPNforAppleTV.entitlements;
+				DEVELOPMENT_TEAM = NY6WPB2KHL;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vada.appletv.vpn;
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4AB078EB5E408CC999C078E2 /* Build configuration list for PBXNativeTarget "VPNforAppleTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				631176760CB929E9A3CF11BF /* Debug */,
+				E8BDCEC8AC67351F35BEA029 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D29473036205B872E19ABBAC /* Build configuration list for PBXProject "VPNforAppleTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E6F8F46E898DAFD6CAD9CA7 /* Debug */,
+				9E88D47CCFBBC02E6824D014 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D2C9974E365C3E7426D6951C /* Build configuration list for PBXNativeTarget "PacketTunnel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				375354DAD982C71DE1657D7C /* Debug */,
+				6F558B1F05BE0F06508F3762 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		FEF001C8A9298F8463C7D2E5 /* XCLocalSwiftPackageReference "Packages/WireGuardKitTV" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/WireGuardKitTV;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1C40522F6A1E59FEC27AAFF4 /* WireGuardKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WireGuardKit;
+		};
+		9689E43380F92C798DF063D6 /* WireGuardKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WireGuardKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 646A88CE673398C2BCE6660A /* Project object */;
+}
